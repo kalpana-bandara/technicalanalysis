@@ -1,15 +1,3 @@
-::-webkit-input-placeholder{
-    color: #BCD1D8 !important;
-    font-weight: 500;
-}
-
-input:focus , select:focus {
-    outline: none !important;
-    box-shadow: none !important;
-    background-color: #79A3B1 !important;
-    border-color: #fff !important;
-    color: #fff !important;
-}
 
 
 
@@ -174,4 +162,17 @@ li{
     border-radius: 5px;
     margin-left: 23%;
 
+}
+
+::-webkit-input-placeholder{
+    color: #BCD1D8 !important;
+    font-weight: 500;
+}
+
+input:focus , select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #79A3B1 !important;
+    border-color: #fff !important;
+    color: #fff !important;
 }

@@ -37,6 +37,7 @@ async function loadCoin() {
 
   }
   document.getElementById("first").style.display = "none"
+  document.getElementById("details-cards").style.display = "block"
 }
 
 
@@ -93,9 +94,9 @@ function createTable(x, b, c, supertrend, price, whiteSoldier , macd) {
       <div class="card bg-light mb-3" style="max-width: 380px;">
           <div class="card-header c-header">Technical Details</div>
           <div class="card-body c-body">
-              <p>Trend : <span style="font-weight: 300;">${x.trend} <span></p>
-              <p>RSI : <span style="font-weight: 300;">${(c.value).toFixed(2)} <span></p>
-              <p>MACD : <span style="font-weight: 300;">${cross} <span></p>
+              <p><b>Trend :</b> <span style="font-weight: 300;">${x.trend} <span></p>
+              <p><b>RSI :</b> <span style="font-weight: 300;">${(c.value).toFixed(2)} <span></p>
+              <p><b>MACD :</b> <span style="font-weight: 300;">${cross} <span></p>
 
           </div>
       </div>
@@ -103,9 +104,10 @@ function createTable(x, b, c, supertrend, price, whiteSoldier , macd) {
       <div class="card bg-light mb-3" style="max-width: 380px;">
           <div class="card-header c-header">Fib Retracement(0.618)</div>
           <div class="card-body c-body">
-              <p>Price : <span style="font-weight: 300;">${(x.value).toFixed(3)} <span></p>
-              <p>Start From : <span style="font-weight: 300;">${(x.startPrice).toFixed(3)}<span></p>
-              <p>End From : <span style="font-weight: 300;">${(x.endPrice).toFixed(3)} <span></p>
+              <p><b>Price :</b> <span style="font-weight: 300;">${(x.value).toFixed(3)} <span></p>
+              <p><b>Start Price :</b> <span style="font-weight: 300;">${(x.startPrice).toFixed(3)}<span></p>
+              <p><b>End Price :</b> <span style="font-weight: 300;">${(x.endPrice).toFixed(3)} <span></p>
+              <p>${bullOrBear}</p>
 
           </div>
       </div>
@@ -114,15 +116,15 @@ function createTable(x, b, c, supertrend, price, whiteSoldier , macd) {
           <div style="margin-bottom: 20px;" class="card-header c-header">Signal Advice</div>
           <div class="card-body c-body">
               <button class="signal">${supertrend.valueAdvice}</button>
-              <p class="stop">Stoploss: ${(supertrend.value).toFixed(3)}</p>
+              <p class="stop">Stoploss : ${(supertrend.value).toFixed(3)}</p>
           </div>
       </div>
 
       <div class="card bg-light mb-3" style="max-width: 380px;">
           <div style="margin-bottom: 40px;" class="card-header c-header">Pivot Points (15m)</div>
           <div class="card-body c-body">
-              <button id="pivotButton" class="pivot">Show Pivot Points</button>
-              <ul class="pivotShow" style = "padding-left: 0; margin-top: 10px;">
+              <button id="pivotButton" class="pivot" style="margin-bottom:20px;">Show Pivot Points</button>
+              <ul class="pivotShow" style = "padding-left: 0;">
               
               </ul>  
           </div>

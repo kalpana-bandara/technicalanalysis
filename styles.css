@@ -103,6 +103,7 @@ body{
 .details-cards{
     position: relative;
     padding: 10% 0;
+    display: none;
 }
 
 .c-header{
